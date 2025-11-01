@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Окно с таблицами -->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <Button text="Назад" onAction="#onBackButtonClick"/>
+    </top>
+    <center>
+        <VBox alignment="CENTER" spacing="20.0">
+            <Button text="Гостинницы" onAction="#onHotelsButtonClick"/>
+            <Button text="Персонал" onAction="#onStaffButtonClick"/>
+            <Button text="Должности" onAction="#onPositionButtonClick"/>
+            <Button text="Номера" onAction="#onRoomsButtonClick"/>
+            <Button text="Посетители" onAction="#onVisitorsButtonClick"/>
+            <Button text="Бронь" onAction="#onBookingsButtonClick"/>
+        </VBox>
+    </center>
+</BorderPane>
+

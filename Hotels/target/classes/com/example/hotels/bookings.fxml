@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Окно с гостинницами -->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <Label text="Брони" styleClass="h1"/>
+    </top>
+    <center>
+        <VBox alignment="CENTER" spacing="20.0">
+
+        </VBox>
+    </center>
+</BorderPane>
