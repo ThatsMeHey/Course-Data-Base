@@ -116,17 +116,6 @@ CREATE TRIGGER tr_free_room
     FOR EACH ROW
     EXECUTE FUNCTION free_room_on_checkout();
 	
--- Представление для анализа продолжительности проживания гостей
-CREATE VIEW visitors_time AS
-SELECT 
-	id, 
-	name, 
-	hotel_code, 
-	room_number, 
-	arrival_date,
-	departure_date,
-	departure_date - arrival_date AS time_of_residence
-FROM visitors;
 
 
 
