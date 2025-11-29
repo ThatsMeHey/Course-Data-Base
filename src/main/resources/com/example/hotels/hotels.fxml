@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Окно с гостинницами -->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.hotels.HotelsController">
+    <top>
+        <HBox>
+            <Button text="Назад" onAction="#onBackButtonClick"/>
+            <Button text="Добавить" onAction="#addNew"/>
+            <Button text="Фильтры" onAction="#openFilters"/>
+        </HBox>
+    </top>
+    <center>
+        <TableView fx:id="hotelsTable">
+            <columns>
+                <TableColumn text="№" prefWidth="50" fx:id="hRowNumber" sortable="false"/>
+
+                <TableColumn text="Код гостинницы" prefWidth="100" fx:id="code"/>
+                <TableColumn text="Название" prefWidth="150" fx:id="name"/>
+                <TableColumn text="ИНН" prefWidth="100" fx:id="inn"/>
+                <TableColumn text="Директор" prefWidth="150" fx:id="director"/>
+                <TableColumn text="Владелец" prefWidth="150" fx:id="owner"/>
+                <TableColumn text="Адрес" prefWidth="836" fx:id="address"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>

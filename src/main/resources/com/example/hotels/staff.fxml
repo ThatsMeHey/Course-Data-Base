@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Окно с гостинницами -->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.hotels.StaffController">
+    <top>
+        <HBox>
+            <Button text="Назад" onAction="#onBackButtonClick"/>
+            <Button text="Добавить" onAction="#addWithExistingJob"/>
+            <Button text="Добавить (новая профессия)" onAction="#addWithNotExistingJob"/>
+            <Button text="Фильтры" onAction="#openFilters"/>
+        </HBox>
+    </top>
+    <center>
+        <TableView fx:id="staffTable">
+            <columns>
+                <TableColumn text="№" prefWidth="50" fx:id="sRowNumber" sortable="false"/>
+
+                <TableColumn text="Код гостинницы" prefWidth="100" fx:id="sCode"/>
+                <TableColumn text="Название" prefWidth="150" fx:id="shName"/>
+                <TableColumn text="Имя" prefWidth="150" fx:id="sName"/>
+                <TableColumn text="ИНН" prefWidth="100" fx:id="sInn"/>
+                <TableColumn text="Код профессии" prefWidth="100" fx:id="sjCode"/>
+                <TableColumn text="Профессия" prefWidth="150" fx:id="sjName"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>

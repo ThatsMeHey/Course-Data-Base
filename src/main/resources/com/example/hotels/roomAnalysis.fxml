@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.hotels.RoomAnalysisController">
+    <top>
+        <HBox>
+            <Button text="Назад" onAction="#onBackButtonClick"/>
+        </HBox>
+    </top>
+    <center>
+        <VBox>
+            <TableView fx:id="roomAnalysisTable" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn text="№" prefWidth="50" fx:id="hRowNumber" sortable="false"/>
+
+                    <TableColumn text="Код гостинницы" prefWidth="100" fx:id="code"/>
+                    <TableColumn text="Название гостинницы" prefWidth="150" fx:id="name"/>
+                    <TableColumn text="Комнат всего" prefWidth="150" fx:id="totalRooms"/>
+                    <TableColumn text="Свободные комнаты" prefWidth="150" fx:id="availableRooms"/>
+                    <TableColumn text="Занятые комнаты" prefWidth="150" fx:id="occupiedRooms"/>
+                    <TableColumn text="Текущие посетители" prefWidth="150" fx:id="currentVisitors"/>
+                    <TableColumn text="Активные брони" prefWidth="150" fx:id="activeReservations"/>
+                    <TableColumn text="Процент занятости" prefWidth="150" fx:id="occupiedPercentage"/>
+                </columns>
+            </TableView>
+
+            <TableView fx:id="roomAnalysisResultTable" prefHeight="100" maxHeight="100">
+                <columns>
+                    <TableColumn text="№" prefWidth="50" fx:id="hRowNumberR" sortable="false"/>
+
+                    <TableColumn text="-" prefWidth="100" fx:id="codeR"/>
+                    <TableColumn text="-" prefWidth="150" fx:id="nameR"/>
+                    <TableColumn text="Комнат всего" prefWidth="150" fx:id="totalRoomsR"/>
+                    <TableColumn text="Всего свободных комнат" prefWidth="150" fx:id="availableRoomsR"/>
+                    <TableColumn text="Всего занятых комнат" prefWidth="150" fx:id="occupiedRoomsR"/>
+                    <TableColumn text="Всего посетителей" prefWidth="150" fx:id="currentVisitorsR"/>
+                    <TableColumn text="Всего броней" prefWidth="150" fx:id="activeReservationsR"/>
+                    <TableColumn text="Общий процент занятости" prefWidth="150" fx:id="occupiedPercentageR"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>

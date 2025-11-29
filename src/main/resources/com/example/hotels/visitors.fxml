@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Окно с гостинницами -->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.hotels.VisitorsController">
+    <top>
+        <HBox>
+            <Button text="Назад" onAction="#onBackButtonClick"/>
+            <Button text="Добавить" onAction="#addNew"/>
+            <Button text="Фильтры" onAction="#openFilters"/>
+        </HBox>
+    </top>
+    <center>
+        <TableView fx:id="visitorsTable">
+            <columns>
+                <TableColumn text="№" prefWidth="50" fx:id="vRowNumber" sortable="false"/>
+
+                <TableColumn text="id" prefWidth="50" fx:id="vId"/>
+                <TableColumn text="Код гостинницы" prefWidth="100" fx:id="vhCode"/>
+                <TableColumn text="Название" prefWidth="150" fx:id="vhName"/>
+                <TableColumn text="Номер комнаты" prefWidth="50" fx:id="vrNumber"/>
+                <TableColumn text="Имя" prefWidth="150" fx:id="vName"/>
+                <TableColumn text="Заселение" prefWidth="150" fx:id="vArrival"/>
+                <TableColumn text="Выселение" prefWidth="150" fx:id="vDeparture"/>
+                <TableColumn text="Описание" prefWidth="686" fx:id="vDescription"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
