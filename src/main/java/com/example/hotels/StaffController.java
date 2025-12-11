@@ -36,7 +36,7 @@ public class StaffController extends TablesController{
     private ObservableList<String> HotelList = FXCollections.observableArrayList();
     private ObservableList<String> JobList = FXCollections.observableArrayList();
 
-    public void fillStaff(){
+    public void fillTable(){
         staffTable.setEditable(true);
         staffTable.setItems(staffObs);
 

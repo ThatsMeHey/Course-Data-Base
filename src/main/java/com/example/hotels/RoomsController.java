@@ -37,7 +37,7 @@ public class RoomsController extends TablesController{
     private ObservableList<String> HotelList = FXCollections.observableArrayList();
     private ObservableList<String> variantsList = FXCollections.observableArrayList();
 
-    public void fillRooms(){
+    public void fillTable(){
         roomsTable.setEditable(true);
         roomsTable.setItems(roomsObs);
 

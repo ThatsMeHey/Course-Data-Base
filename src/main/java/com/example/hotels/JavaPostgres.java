@@ -253,6 +253,16 @@ public class JavaPostgres {
     }
     public ArrayList<HotelStatsView> getHotelsStats() throws SQLException
     {
+        try (Connection conn = connect();
+             Statement stmt = conn.createStatement()) {
+            stmt.execute("SELECT auto_checkout_and_checkin()");
+        }
+        catch (SQLException e) {
+            System.out.println("ОШИБКА при вызове процедуры: " + e.getMessage());
+
+            ArrayList<HotelsFinanceAnalysisView> objList = new ArrayList<>();
+        }
+
         ArrayList<HotelStatsView> objList = new ArrayList<>();
 
         String sql = "SELECT * FROM hotel_statistics";
@@ -277,6 +287,16 @@ public class JavaPostgres {
     }
     public ArrayList<RoomAnalysisView> getRoomAnalysis() throws SQLException
     {
+        try (Connection conn = connect();
+             Statement stmt = conn.createStatement()) {
+            stmt.execute("SELECT auto_checkout_and_checkin()");
+        }
+        catch (SQLException e) {
+            System.out.println("ОШИБКА при вызове процедуры: " + e.getMessage());
+
+            ArrayList<HotelsFinanceAnalysisView> objList = new ArrayList<>();
+        }
+
         ArrayList<RoomAnalysisView> objList = new ArrayList<>();
 
         String sql = "SELECT * FROM room_occupancy_analysis";
@@ -303,6 +323,16 @@ public class JavaPostgres {
     }
     public ArrayList<HotelsFinanceAnalysisView> getHotelsFinAnalysis() throws SQLException
     {
+        try (Connection conn = connect();
+             Statement stmt = conn.createStatement()) {
+            stmt.execute("SELECT auto_checkout_and_checkin()");
+        }
+        catch (SQLException e) {
+            System.out.println("ОШИБКА при вызове процедуры: " + e.getMessage());
+
+            ArrayList<HotelsFinanceAnalysisView> objList = new ArrayList<>();
+        }
+
         ArrayList<HotelsFinanceAnalysisView> objList = new ArrayList<>();
 
         String sql = "SELECT * FROM hotel_financial_analysis";

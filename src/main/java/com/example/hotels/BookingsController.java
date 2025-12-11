@@ -10,9 +10,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.ComboBoxTableCell;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
-import javafx.util.converter.IntegerStringConverter;
 
-import java.awt.print.Book;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
@@ -45,7 +43,7 @@ public class BookingsController extends TablesController{
     private ObservableList<String> HotelList = FXCollections.observableArrayList();
     SortedList<String> HotelListSorted = new SortedList<>(HotelList);
 
-    public void fillBookings(){
+    public void fillTable(){
         bookingsTable.setEditable(true);
         bookingsTable.setItems(bookingsObs);
 

@@ -8,10 +8,8 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.cell.ComboBoxTableCell;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
-import javafx.util.converter.IntegerStringConverter;
 
 import java.sql.SQLException;
 import java.sql.Timestamp;
@@ -45,7 +43,7 @@ public class VisitorsController extends TablesController{
     private ObservableList<String> HotelList = FXCollections.observableArrayList();
     SortedList<String> HotelListSorted = new SortedList<>(HotelList);
 
-    public void fillVisitors(){
+    public void fillTable(){
         visitorsTable.setEditable(true);
         visitorsTable.setItems(visitorsObs);
 

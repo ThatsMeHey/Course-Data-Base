@@ -1,7 +1,5 @@
 package com.example.hotels;
 
-import javafx.scene.control.cell.PropertyValueFactory;
-
 public class HotelStatsView {
     public String code;
     public String name;

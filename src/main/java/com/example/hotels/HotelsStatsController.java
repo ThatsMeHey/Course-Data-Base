@@ -48,7 +48,7 @@ public class HotelsStatsController extends ReportsTableController{
     private final ObservableList<HotelStatsView> hotelsStatsObs = FXCollections.observableArrayList();
     private final ObservableList<HotelStatsView> hotelsStatsResultObs = FXCollections.observableArrayList();
 
-    public void fillHotelsStats(){
+    public void fillTable(){
         hotelStatsTable.setItems(hotelsStatsObs);
         setupRowNumberColumn(hRowNumber);
 

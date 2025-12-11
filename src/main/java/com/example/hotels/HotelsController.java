@@ -31,7 +31,7 @@ public class HotelsController extends TablesController {
     private TableColumn<HotelsView, String> address;
     private final ObservableList<HotelsView> hotelsObs = FXCollections.observableArrayList();
 
-    public void fillHotels(){
+    public void fillTable(){
         hotelsTable.setEditable(true);
         hotelsTable.setItems(hotelsObs);
 

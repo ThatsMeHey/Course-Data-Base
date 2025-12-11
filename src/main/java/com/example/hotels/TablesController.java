@@ -48,6 +48,8 @@ public abstract class TablesController {
         });
     }
 
+    public abstract void fillTable();
+
     @FXML
     protected void onBackButtonClick(){
         primaryStage.setScene(primaryScene);

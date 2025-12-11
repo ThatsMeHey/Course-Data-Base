@@ -23,7 +23,7 @@ public class JobsController extends TablesController{
     private TableColumn<JobView, String> jName;
     private final ObservableList<JobView> jobObs = FXCollections.observableArrayList();
 
-    public void fillJobs(){
+    public void fillTable(){
         positionsTable.setEditable(true);
         positionsTable.setItems(jobObs);
 

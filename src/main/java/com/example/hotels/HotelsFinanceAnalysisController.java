@@ -65,7 +65,7 @@ public class HotelsFinanceAnalysisController extends ReportsTableController {
     private final ObservableList<HotelsFinanceAnalysisView> hotelsFinAnalysisObs = FXCollections.observableArrayList();
     private final ObservableList<HotelsFinanceAnalysisView> hotelsFinAnalysisResultObs = FXCollections.observableArrayList();
 
-    public void fillHotelsFinAnalysis(){
+    public void fillTable(){
         hotelsFinanceAnalysisTable.setItems(hotelsFinAnalysisObs);
         setupRowNumberColumn(hRowNumber);
 

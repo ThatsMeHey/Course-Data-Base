@@ -8,15 +8,12 @@ import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.event.Event;
-import javafx.geometry.HPos;
 import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
@@ -24,7 +21,6 @@ import javafx.util.Pair;
 
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Locale;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -98,7 +94,7 @@ public class FilterWindow<T> {
     }
 
     public FilterWindow(TableView<T> tableView, ObservableList<T> originalItems) {
-        this.originalItems = originalItems; // твои данные
+        this.originalItems = originalItems;
         filteredList = new FilteredList<>(originalItems, p -> true);
         this.tableView = tableView;
         sortedList = new SortedList<>(filteredList);

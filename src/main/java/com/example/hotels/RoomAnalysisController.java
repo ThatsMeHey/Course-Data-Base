@@ -2,7 +2,6 @@ package com.example.hotels;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.collections.transformation.FilteredList;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -12,7 +11,6 @@ import javafx.util.converter.DoubleStringConverter;
 import javafx.util.converter.IntegerStringConverter;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 public class RoomAnalysisController extends ReportsTableController{
     @FXML
@@ -59,7 +57,7 @@ public class RoomAnalysisController extends ReportsTableController{
     private final ObservableList<RoomAnalysisView> roomAnalysisObs = FXCollections.observableArrayList();
     private final ObservableList<RoomAnalysisView> roomAnalysisResultObs = FXCollections.observableArrayList();
 
-    public void fillRoomAnalysis(){
+    public void fillTable(){
         roomAnalysisTable.setItems(roomAnalysisObs);
         setupRowNumberColumn(hRowNumber);
 

@@ -1,8 +1,5 @@
 package com.example.hotels;
 
-import javafx.fxml.FXML;
-import javafx.scene.control.TableColumn;
-
 public class RoomAnalysisView {
     public String code;
     public String name;

@@ -58,7 +58,7 @@ public class Controller {
 
 
     @FXML
-    protected TablesController createView(String name, String fx, Scene scene)
+    protected void createView(String fx, Scene scene)
     {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fx));
@@ -66,77 +66,49 @@ public class Controller {
             TablesController tController = loader.getController();
             tController.setStageParameters(primaryStage, scene);
             primaryStage.setScene(newScene);
-            primaryStage.setTitle(name);
             tController.width = width;
             tController.height = height;
 
-            return tController;
-        } catch (IOException e) {
-        }
-        return null;
+            tController.fillTable();
+
+        } catch (IOException e) {}
     }
 
     @FXML
     protected void onHotelsButtonClick(){
-        TablesController controller = createView("Гостинницы", "hotels.fxml", tableScene);
-        if (controller != null) {
-            ((HotelsController)controller).fillHotels();
-        }
+        createView("hotels.fxml", tableScene);
     }
     @FXML
     protected void onStaffButtonClick(){
-        TablesController controller = createView("Персонал", "staff.fxml", tableScene);
-        if (controller != null) {
-            ((StaffController)controller).fillStaff();
-        }
+        createView("staff.fxml", tableScene);
     }
     @FXML
     protected void onPositionButtonClick(){
-        TablesController  controller = createView("Должности", "positions.fxml", tableScene);
-        if (controller != null) {
-            ((JobsController)controller).fillJobs();
-        }
+        createView("positions.fxml", tableScene);
     }
     @FXML
     protected void onRoomsButtonClick(){
-        TablesController controller = createView("Номера", "rooms.fxml", tableScene);
-        if (controller != null) {
-            ((RoomsController)controller).fillRooms();
-        }
+        createView("rooms.fxml", tableScene);
     }
     @FXML
     protected void onVisitorsButtonClick(){
-        TablesController controller = createView("Посетители", "visitors.fxml", tableScene);
-        if (controller != null) {
-            ((VisitorsController)controller).fillVisitors();
-        }
+        createView("visitors.fxml", tableScene);
     }
     @FXML
     protected void onBookingsButtonClick(){
-        TablesController controller = createView("Брони", "bookings.fxml", tableScene);
-        if (controller != null) {
-            ((BookingsController)controller).fillBookings();
-        }
+        createView("bookings.fxml", tableScene);
     }
+
     @FXML
     protected void onHotelsStatsClick(){
-        TablesController controller = createView("-", "hotelsStats.fxml", reportsScene);
-        if (controller != null) {
-            ((HotelsStatsController)controller).fillHotelsStats();
-        }
+        createView("hotelsStats.fxml", reportsScene);
     }
     @FXML
     protected void onRoomsAnalysisClick(){
-        TablesController controller = createView("-", "roomAnalysis.fxml", reportsScene);
-        if (controller != null) {
-            ((RoomAnalysisController)controller).fillRoomAnalysis();
-        }
+        createView("roomAnalysis.fxml", reportsScene);
     }
     @FXML
     protected void onHotelsFinanceAnalysisClick(){
-        TablesController controller = createView("-", "hotelsFinanceAnalysis.fxml", reportsScene);
-        if (controller != null) {
-            ((HotelsFinanceAnalysisController)controller).fillHotelsFinAnalysis();
-        }
+        createView("hotelsFinanceAnalysis.fxml", reportsScene);
     }
 }
